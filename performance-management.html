@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard - Employee Performance Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col">
+        <!-- Page Header -->
+        <header class="bg-white shadow-md py-4 px-6">
+            <h1 class="text-2xl font-semibold text-gray-700">HR Dashboard</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <!-- Employee Performance Overview Section -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Employee Performance Overview</h2>
+                <table class="w-full bg-white shadow rounded-lg">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="px-4 py-2 text-left text-gray-600">Employee Name</th>
+                            <th class="px-4 py-2 text-left text-gray-600">Role</th>
+                            <th class="px-4 py-2 text-center text-gray-600">Productivity Score</th>
+                            <th class="px-4 py-2 text-center text-gray-600">Efficiency</th>
+                            <th class="px-4 py-2 text-center text-gray-600">Project Completion</th>
+                            <th class="px-4 py-2 text-center text-gray-600">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t">
+                            <td class="px-4 py-2">John Doe</td>
+                            <td class="px-4 py-2">Software Engineer</td>
+                            <td class="px-4 py-2 text-center">85%</td>
+                            <td class="px-4 py-2 text-center">88%</td>
+                            <td class="px-4 py-2 text-center">92%</td>
+                            <td class="px-4 py-2 text-center">
+                                <button class="bg-blue-500 text-white px-3 py-1 rounded-lg hover:bg-blue-600">View</button>
+                                <button class="bg-green-500 text-white px-3 py-1 rounded-lg hover:bg-green-600">Update</button>
+                            </td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-4 py-2">Jane Smith</td>
+                            <td class="px-4 py-2">Project Manager</td>
+                            <td class="px-4 py-2 text-center">90%</td>
+                            <td class="px-4 py-2 text-center">93%</td>
+                            <td class="px-4 py-2 text-center">95%</td>
+                            <td class="px-4 py-2 text-center">
+                                <button class="bg-blue-500 text-white px-3 py-1 rounded-lg hover:bg-blue-600">View</button>
+                                <button class="bg-green-500 text-white px-3 py-1 rounded-lg hover:bg-green-600">Update</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Feedback and Goal Management Section -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Feedback & Goal Management</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Feedback Form -->
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h3 class="text-lg font-semibold mb-4">Provide Feedback</h3>
+                        <form action="#" method="POST" class="space-y-4">
+                            <div>
+                                <label for="employee" class="block text-sm font-semibold text-gray-600">Employee</label>
+                                <select id="employee" name="employee" class="w-full mt-2 p-2 border rounded-lg bg-gray-100">
+                                    <option value="john">John Doe</option>
+                                    <option value="jane">Jane Smith</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="feedback" class="block text-sm font-semibold text-gray-600">Feedback</label>
+                                <textarea id="feedback" name="feedback" rows="4" class="w-full mt-2 p-2 border rounded-lg bg-gray-100" required></textarea>
+                            </div>
+                            <div class="flex justify-end">
+                                <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Goal Management -->
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h3 class="text-lg font-semibold mb-4">Manage Goals</h3>
+                        <ul>
+                            <li class="flex justify-between py-2 border-b">
+                                <span>Complete Project X</span>
+                                <button class="bg-green-500 text-white px-3 py-1 rounded-lg hover:bg-green-600">Mark Complete</button>
+                            </li>
+                            <li class="flex justify-between py-2 border-b">
+                                <span>Achieve 95% efficiency</span>
+                                <button class="bg-yellow-500 text-white px-3 py-1 rounded-lg hover:bg-yellow-600">Update</button>
+                            </li>
+                            <li class="flex justify-between py-2">
+                                <span>Attend Leadership Training</span>
+                                <button class="bg-gray-500 text-white px-3 py-1 rounded-lg hover:bg-gray-600">Not Started</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recognition Management Section -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Recognitions</h2>
+                <div class="bg-white shadow rounded-lg p-4">
+                    <ul>
+                        <li class="flex justify-between py-2 border-b">
+                            <span>🏆 Employee of the Month - December 2023</span>
+                            <button class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600">Remove</button>
+                        </li>
+                        <li class="flex justify-between py-2 border-b">
+                            <span>✅ Completed Agile Project Management Certification</span>
+                            <button class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600">Remove</button>
+                        </li>
+                        <li class="flex justify-between py-2">
+                            <span>🎉 Teamwork Excellence Award - Q4 2023</span>
+                            <button class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600">Remove</button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Actionable Buttons -->
+            <div class="flex justify-end gap-4">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600">
+                    Add New Goal
+                </button>
+                <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600">
+                    Add Recognition
+                </button>
+                <button class="bg-gray-500 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-600">
+                    Generate Report
+                </button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

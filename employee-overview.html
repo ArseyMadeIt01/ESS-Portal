@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Overview - ESS Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <div class="min-h-screen flex flex-col">
+
+        <!-- Navbar -->
+        <header class="bg-gray-800 text-white p-6">
+            <div class="flex items-center justify-between">
+                <a href="dashboard.html" class="text-2xl font-semibold">ESS Portal</a>
+                <nav class="space-x-4">
+                    <a href="hr-dashboard.html" class="hover:text-gray-300">Dashboard</a>
+                    <a href="help.html" class="hover:text-gray-300">Help</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+
+            <!-- Search Bar -->
+            <div class="relative flex mb-8 max-w-md mx-auto">
+                <input type="text" class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search Employees...">
+                <div class="absolute left-3 top-2">
+                    <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Employee Directory -->
+            <section class="mb-8">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-6">Employee Directory</h2>
+                <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
+                    <table class="w-full text-left table-auto">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Name</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Department</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Position</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Contact</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Status</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Example Employee Row -->
+                            <tr class="border-b hover:bg-gray-100 transition">
+                                <td class="py-3 px-4 text-sm">John Doe</td>
+                                <td class="py-3 px-4 text-sm">IT</td>
+                                <td class="py-3 px-4 text-sm">Software Engineer</td>
+                                <td class="py-3 px-4 text-sm">john.doe@email.com</td>
+                                <td class="py-3 px-4 text-sm text-green-500">Active</td>
+                                <td class="py-3 px-4 text-sm">
+                                    <a href="employee_profile.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">View Profile</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-100 transition">
+                                <td class="py-3 px-4 text-sm">Jane Smith</td>
+                                <td class="py-3 px-4 text-sm">HR</td>
+                                <td class="py-3 px-4 text-sm">HR Manager</td>
+                                <td class="py-3 px-4 text-sm">jane.smith@email.com</td>
+                                <td class="py-3 px-4 text-sm text-yellow-500">On Leave</td>
+                                <td class="py-3 px-4 text-sm">
+                                    <a href="employee_profile.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">View Profile</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Employee Status Overview -->
+            <section>
+                <h2 class="text-3xl font-semibold text-gray-800 mb-6">Employee Status Overview</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Active Employees -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Active Employees</h3>
+                        <div class="text-4xl font-bold text-green-500">120</div>
+                        <p class="text-gray-500">Employees currently active in the company</p>
+                    </div>
+
+                    <!-- On Leave -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">On Leave</h3>
+                        <div class="text-4xl font-bold text-yellow-500">8</div>
+                        <p class="text-gray-500">Employees currently on leave</p>
+                    </div>
+
+                    <!-- Probation -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">On Probation</h3>
+                        <div class="text-4xl font-bold text-orange-500">5</div>
+                        <p class="text-gray-500">Employees currently on probation</p>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white p-6">
+            <div class="flex justify-center">
+                <p>&copy; 2025 ESS Portal. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

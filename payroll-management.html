@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll and Compensation - ESS Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <div class="min-h-screen flex flex-col">
+
+        <!-- Navbar -->
+        <header class="bg-gray-800 text-white p-6">
+            <div class="flex items-center justify-between">
+                <a href="hr-dashboard.html" class="text-2xl font-semibold">ESS Portal</a>
+                <nav class="space-x-4">
+                    <a href="hr-dashboard.html" class="hover:text-gray-300">Dashboard</a>
+                    <a href="help.html" class="hover:text-gray-300">Help</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+
+            <!-- Salary Overview -->
+            <section class="mb-8">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-6">Salary Overview</h2>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <table class="w-full text-left table-auto">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Employee</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Base Salary</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Bonus</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Commission</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Allowances</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Total Compensation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-100 transition">
+                                <td class="py-3 px-4 text-sm">John Doe</td>
+                                <td class="py-3 px-4 text-sm">$4,000</td>
+                                <td class="py-3 px-4 text-sm">$500</td>
+                                <td class="py-3 px-4 text-sm">$300</td>
+                                <td class="py-3 px-4 text-sm">$200</td>
+                                <td class="py-3 px-4 text-sm">$5,000</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-100 transition">
+                                <td class="py-3 px-4 text-sm">Jane Smith</td>
+                                <td class="py-3 px-4 text-sm">$3,500</td>
+                                <td class="py-3 px-4 text-sm">$400</td>
+                                <td class="py-3 px-4 text-sm">$250</td>
+                                <td class="py-3 px-4 text-sm">$150</td>
+                                <td class="py-3 px-4 text-sm">$4,300</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Payslips -->
+            <section class="mb-8">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-6">Payslips</h2>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="space-y-4">
+                        <!-- Payslip List -->
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold text-gray-800">John Doe - January 2025</span>
+                            <a href="#" class="text-blue-500 hover:underline">Download Payslip</a>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold text-gray-800">Jane Smith - January 2025</span>
+                            <a href="#" class="text-blue-500 hover:underline">Download Payslip</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tax and Deductions -->
+            <section class="mb-8">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-6">Tax and Deductions</h2>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <table class="w-full text-left table-auto">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Employee</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Taxable Income</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Tax Deduction</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Pension</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Social Security</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Total Deductions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-100 transition">
+                                <td class="py-3 px-4 text-sm">John Doe</td>
+                                <td class="py-3 px-4 text-sm">$5,000</td>
+                                <td class="py-3 px-4 text-sm">$500</td>
+                                <td class="py-3 px-4 text-sm">$200</td>
+                                <td class="py-3 px-4 text-sm">$100</td>
+                                <td class="py-3 px-4 text-sm">$800</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-100 transition">
+                                <td class="py-3 px-4 text-sm">Jane Smith</td>
+                                <td class="py-3 px-4 text-sm">$4,500</td>
+                                <td class="py-3 px-4 text-sm">$450</td>
+                                <td class="py-3 px-4 text-sm">$180</td>
+                                <td class="py-3 px-4 text-sm">$90</td>
+                                <td class="py-3 px-4 text-sm">$720</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Bonus & Incentives Tracking -->
+            <section>
+                <h2 class="text-3xl font-semibold text-gray-800 mb-6">Bonus & Incentives Tracking</h2>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="space-y-4">
+                        <!-- Bonus List -->
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold text-gray-800">John Doe - Sales Performance Bonus</span>
+                            <span class="text-green-500">$500</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold text-gray-800">Jane Smith - Annual Performance Bonus</span>
+                            <span class="text-green-500">$400</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold text-gray-800">John Doe - Team Leadership Bonus</span>
+                            <span class="text-green-500">$300</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white p-6">
+            <div class="flex justify-center">
+                <p>&copy; 2025 ESS Portal. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

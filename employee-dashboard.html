@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div
+            class="bg-gray-900 text-gray-100 w-64 space-y-8 py-6 px-4 fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300"
+            id="sidebar">
+            <div class="text-center text-2xl font-bold">
+                <span class="text-blue-500">EMPLOYEE</span> Dashboard
+            </div>
+            <nav class="space-y-4">
+                <a href="profile.html"
+                    class="flex items-center gap-3 py-2 px-4 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white">
+                    <span>Profile</span>
+                </a>
+                <a href="leave-processing.html"
+                    class="flex items-center gap-3 py-2 px-4 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white">
+                    <span>Leave Management</span>
+                </a>
+                <a href="payroll.html"
+                    class="flex items-center gap-3 py-2 px-4 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white">
+                    <span>Payroll</span>
+                </a>
+                <a href="attendance.html"
+                    class="flex items-center gap-3 py-2 px-4 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white">
+                    <span>Attendance</span>
+                </a>
+                <a href="performance.html"
+                    class="flex items-center gap-3 py-2 px-4 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white">
+                    <span>Performance</span>
+                </a>
+                <a href="expense-claims.html"
+                    class="flex items-center gap-3 py-2 px-4 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white">
+                    <span>Expense Claims</span>
+                </a>
+                <a href="notification.html"
+                    class="flex items-center gap-3 py-2 px-4 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white">
+                    <span>Notifications</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Top Navbar -->
+            <header class="bg-white shadow-md">
+                <div class="flex items-center justify-between px-6 py-4">
+                    <div class="relative">
+                        <input type="text"
+                            class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                            placeholder="Search...">
+                        <div class="absolute left-3 top-2 text-gray-400">
+                            🔍
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <a href="help.html" class="text-gray-600 hover:text-blue-600">Help</a>
+                        <button class="p-2 rounded-full hover:bg-gray-100">🔔</button>
+                        <a href="logout.html" class="text-red-600 hover:text-red-800">Log Out</a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <main class="p-6 space-y-6">
+                <!-- Dashboard Overview -->
+                <section class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">Dashboard Overview</h2>
+                    <p>Welcome back, John Doe! Here's your quick overview:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+                        <div class="bg-blue-100 p-4 rounded-lg shadow">
+                            <h3 class="text-lg font-semibold text-blue-800">Profile</h3>
+                            <p>Name: John Doe</p>
+                            <p>Role: HR Manager</p>
+                        </div>
+                        <div class="bg-green-100 p-4 rounded-lg shadow">
+                            <h3 class="text-lg font-semibold text-green-800">Attendance</h3>
+                            <p>95% Attendance</p>
+                        </div>
+                        <div class="bg-yellow-100 p-4 rounded-lg shadow">
+                            <h3 class="text-lg font-semibold text-yellow-800">Performance</h3>
+                            <p>Goals Progress: 75%</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Toggle Sidebar
+        document.getElementById('menu-button').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.toggle('-translate-x-full');
+        });
+    </script>
+</body>
+
+</html>

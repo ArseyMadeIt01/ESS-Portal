@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management - HR Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-white shadow-md py-4 px-6">
+            <h1 class="text-2xl font-semibold text-gray-700">Attendance Management</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <!-- Filters Section -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Filters</h2>
+                <form class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-white shadow rounded-lg p-4">
+                    <div>
+                        <label for="date" class="block text-sm font-medium text-gray-700">Date</label>
+                        <input type="date" id="date" name="date" class="w-full mt-1 p-2 border rounded-lg bg-gray-50">
+                    </div>
+                    <div>
+                        <label for="department" class="block text-sm font-medium text-gray-700">Department</label>
+                        <select id="department" name="department" class="w-full mt-1 p-2 border rounded-lg bg-gray-50">
+                            <option value="">All Departments</option>
+                            <option value="sales">Sales</option>
+                            <option value="hr">HR</option>
+                            <option value="it">IT</option>
+                            <option value="marketing">Marketing</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700">Apply Filters</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Attendance Records Table -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Attendance Records</h2>
+                <div class="overflow-x-auto bg-white shadow rounded-lg">
+                    <table class="w-full table-auto border-collapse">
+                        <thead class="bg-gray-200">
+                            <tr>
+                                <th class="px-4 py-2 text-left text-gray-600 font-medium">Employee ID</th>
+                                <th class="px-4 py-2 text-left text-gray-600 font-medium">Name</th>
+                                <th class="px-4 py-2 text-left text-gray-600 font-medium">Department</th>
+                                <th class="px-4 py-2 text-left text-gray-600 font-medium">Date</th>
+                                <th class="px-4 py-2 text-left text-gray-600 font-medium">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t">
+                                <td class="px-4 py-2">EMP001</td>
+                                <td class="px-4 py-2">John Doe</td>
+                                <td class="px-4 py-2">IT</td>
+                                <td class="px-4 py-2">2025-01-21</td>
+                                <td class="px-4 py-2 text-green-600">Present</td>
+                            </tr>
+                            <tr class="border-t">
+                                <td class="px-4 py-2">EMP002</td>
+                                <td class="px-4 py-2">Jane Smith</td>
+                                <td class="px-4 py-2">Sales</td>
+                                <td class="px-4 py-2">2025-01-21</td>
+                                <td class="px-4 py-2 text-red-600">Absent</td>
+                            </tr>
+                            <tr class="border-t">
+                                <td class="px-4 py-2">EMP003</td>
+                                <td class="px-4 py-2">Alice Johnson</td>
+                                <td class="px-4 py-2">HR</td>
+                                <td class="px-4 py-2">2025-01-21</td>
+                                <td class="px-4 py-2 text-yellow-600">Late</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Export Section -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">Export Data</h2>
+                <div class="bg-white shadow rounded-lg p-4">
+                    <button class="bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700">Export as CSV</button>
+                    <button class="bg-gray-600 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-700">Export as PDF</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white shadow-md py-4 px-6">
+            <p class="text-center text-gray-600">&copy; 2025 HR Dashboard. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance | Employee Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-6">
+        <h1 class="text-2xl font-bold mb-4">My Attendance</h1>
+
+        <!-- Attendance Summary -->
+        <div class="grid grid-cols-4 gap-4 mb-6">
+            <div class="bg-green-100 p-4 rounded-lg shadow text-center">
+                <h2 class="text-lg font-semibold">Days Present</h2>
+                <p class="text-2xl font-bold">20</p>
+            </div>
+            <div class="bg-red-100 p-4 rounded-lg shadow text-center">
+                <h2 class="text-lg font-semibold">Days Absent</h2>
+                <p class="text-2xl font-bold">5</p>
+            </div>
+            <div class="bg-orange-100 p-4 rounded-lg shadow text-center">
+                <h2 class="text-lg font-semibold">Late Arrivals</h2>
+                <p class="text-2xl font-bold">2</p>
+            </div>
+            <div class="bg-blue-100 p-4 rounded-lg shadow text-center">
+                <h2 class="text-lg font-semibold">Overtime Hours</h2>
+                <p class="text-2xl font-bold">10</p>
+            </div>
+        </div>
+
+        <!-- Monthly Calendar -->
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+            <h2 class="text-xl font-semibold mb-4">Attendance Calendar</h2>
+            <!-- Calendar Placeholder -->
+            <div class="calendar border border-gray-300 p-4 rounded-lg">
+                <p class="text-gray-500 text-center">[Calendar Component Here]</p>
+            </div>
+        </div>
+
+        <!-- Attendance Log Table -->
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+            <h2 class="text-xl font-semibold mb-4">Daily Attendance Log</h2>
+            <table class="w-full border-collapse border border-gray-300">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="border border-gray-300 p-2">Date</th>
+                        <th class="border border-gray-300 p-2">Check-in Time</th>
+                        <th class="border border-gray-300 p-2">Check-out Time</th>
+                        <th class="border border-gray-300 p-2">Status</th>
+                        <th class="border border-gray-300 p-2">Hours Worked</th>
+                        <th class="border border-gray-300 p-2">Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 p-2">Jan 1, 2025</td>
+                        <td class="border border-gray-300 p-2">9:00 AM</td>
+                        <td class="border border-gray-300 p-2">5:00 PM</td>
+                        <td class="border border-gray-300 p-2 text-green-600">Present</td>
+                        <td class="border border-gray-300 p-2">8</td>
+                        <td class="border border-gray-300 p-2">—</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2">Jan 2, 2025</td>
+                        <td class="border border-gray-300 p-2">—</td>
+                        <td class="border border-gray-300 p-2">—</td>
+                        <td class="border border-gray-300 p-2 text-red-600">Absent</td>
+                        <td class="border border-gray-300 p-2">0</td>
+                        <td class="border border-gray-300 p-2">No Leave Request</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2">Jan 3, 2025</td>
+                        <td class="border border-gray-300 p-2">10:00 AM</td>
+                        <td class="border border-gray-300 p-2">6:00 PM</td>
+                        <td class="border border-gray-300 p-2 text-orange-600">Late Arrival</td>
+                        <td class="border border-gray-300 p-2">7.5</td>
+                        <td class="border border-gray-300 p-2">—</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Actions Section -->
+        <div class="flex gap-4">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Mark Attendance</button>
+            <button class="bg-yellow-500 text-white px-4 py-2 rounded-lg">Request Correction</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded-lg">Apply for Leave</button>
+        </div>
+    </div>
+</body>
+</html>

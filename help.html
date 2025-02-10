@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - ESS Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <div class="min-h-screen flex flex-col">
+
+        <!-- Navbar -->
+        <header class="bg-gray-800 text-white p-6">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-semibold">ESS Portal</a>
+                <nav class="space-x-4">
+                    <a href="index.html" class="hover:text-gray-300">Home</a>
+                    <a href="dashboard.html" class="hover:text-gray-300">Dashboard</a>
+                    <a href="help.html" class="text-gray-300">Help</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+
+            <!-- Search Bar -->
+            <div class="relative flex mb-8 max-w-md mx-auto">
+                <input type="text" class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search for help...">
+                <div class="absolute left-3 top-2">
+                    <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <section>
+                <h2 class="text-3xl font-semibold text-gray-800 mb-6">Frequently Asked Questions</h2>
+
+                <!-- FAQ Item 1 -->
+                <div class="mb-6">
+                    <button class="w-full text-left p-4 bg-gray-100 rounded-lg text-gray-800 font-semibold hover:bg-gray-200 transition">
+                        How do I request leave?
+                    </button>
+                    <div class="mt-2 text-gray-600">
+                        <p>To request leave, navigate to the Leave Management section in your dashboard. Select the type of leave you need and fill out the form to submit your request.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="mb-6">
+                    <button class="w-full text-left p-4 bg-gray-100 rounded-lg text-gray-800 font-semibold hover:bg-gray-200 transition">
+                        How do I update my profile information?
+                    </button>
+                    <div class="mt-2 text-gray-600">
+                        <p>You can update your profile details in the Profile section of the dashboard. Click "Edit" next to your profile information and make changes as needed.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="mb-6">
+                    <button class="w-full text-left p-4 bg-gray-100 rounded-lg text-gray-800 font-semibold hover:bg-gray-200 transition">
+                        How can I access my pay slips?
+                    </button>
+                    <div class="mt-2 text-gray-600">
+                        <p>To access your pay slips, go to the Payroll & Compensation section. You can view and download your pay slips from there.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Support Section -->
+            <section class="bg-white p-6 rounded-lg shadow-lg mt-12">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-6">Need Further Assistance?</h2>
+                <p class="text-lg text-gray-600 mb-4">If you are unable to find the information you're looking for, feel free to reach out to our support team.</p>
+                
+                <form action="#" method="POST">
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-semibold text-gray-700">Your Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-semibold text-gray-700">Your Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" required>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-semibold text-gray-700">Your Message</label>
+                        <textarea id="message" name="message" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">Submit</button>
+                </form>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white p-6">
+            <div class="flex justify-center">
+                <p>&copy; 2025 ESS Portal. All Rights Reserved.</p>
+            </div>
+        </footer>
+        
+    </div>
+
+</body>
+</html>

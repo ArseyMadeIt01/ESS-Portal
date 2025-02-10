@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard - ESS Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <div class="min-h-screen flex">
+
+        <!-- Sidebar -->
+        <div class="flex h-screen bg-gray-800 text-white">
+            <div class="w-64 bg-gray-900 p-6">
+                <h1 class="text-2xl font-semibold mb-6">HR Dashboard</h1>
+                <ul>
+                    <li><a href="employee-overview.html" class="text-gray-300 hover:text-white block py-2 transition">Employee Overview</a></li>
+                    <li><a href="leave-management.html" class="text-gray-300 hover:text-white block py-2 transition">Leave Management</a></li>
+                    <li><a href="payroll-management.html" class="text-gray-300 hover:text-white block py-2 transition">Payroll & Compensation</a></li>
+                    <li><a href="attendance-management.html" class="text-gray-300 hover:text-white block py-2 transition">Attendance Management</a></li>
+                    <li><a href="performance-management.html" class="text-gray-300 hover:text-white block py-2 transition">Performance Management</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-8 overflow-y-auto">
+
+            <!-- Top Navbar -->
+            <header class="bg-white shadow-md mb-8">
+                <div class="flex items-center justify-between px-6 py-4">
+                    <!-- Search Bar (Left) -->
+                    <div class="relative flex-1 max-w-xs mr-4">
+                        <input type="text" class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search...">
+                        <div class="absolute left-3 top-2">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Help/Support Button (Left) -->
+                    <a href="help.html"
+                        class="flex items-center gap-3 py-2 px-4 rounded-lg text-gray-600 hover:bg-gray-100 hover:text-blue-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 13V6a6 6 0 10-12 0v7M6 10h12" />
+                        </svg>
+                        Help
+                    </a>
+
+                    <!-- Notification Bell -->
+                    <button class="p-2 rounded-full hover:bg-gray-200">
+                        <svg class="h-6 w-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                        </svg>
+                    </button>
+                     <!-- Log Out Button -->
+                     <a href="logout.html"
+                     class="flex items-center gap-3 py-2 px-4 rounded-lg text-gray-600 hover:bg-gray-100 hover:text-red-600">
+                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7l-7-7-7 7M17 17l-7 7-7-7" />
+                     </svg>
+                     Log Out
+                     </a>
+                </div>
+            </header>
+
+            <!-- Dashboard Greeting -->
+            <div class="text-2xl font-semibold">Welcome, HR Manager</div>
+           
+
+            <!-- Dashboard Overview -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                <!-- Employee Overview -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Employee Overview</h2>
+                    <div class="text-4xl font-bold text-blue-600">120</div>
+                    <p class="text-gray-500">Total Employees</p>
+                </div>
+
+                <!-- Leave Management -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Leave Management</h2>
+                    <div class="text-4xl font-bold text-orange-500">15</div>
+                    <p class="text-gray-500">Pending Leave Requests</p>
+                </div>
+
+                <!-- Payroll & Compensation -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Payroll & Compensation</h2>
+                    <div class="text-4xl font-bold text-green-500">$150,000</div>
+                    <p class="text-gray-500">Total Payroll Budget</p>
+                </div>
+
+                <!-- Attendance Management -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Attendance Management</h2>
+                    <div class="text-4xl font-bold text-purple-600">98%</div>
+                    <p class="text-gray-500">Employee Attendance Rate</p>
+                </div>
+            </div>
+
+            <!-- Recent Leave Requests Table -->
+            <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Recent Leave Requests</h2>
+                <table class="w-full text-left table-auto">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="py-3 px-4 text-sm font-semibold text-gray-600">Employee</th>
+                            <th class="py-3 px-4 text-sm font-semibold text-gray-600">Leave Type</th>
+                            <th class="py-3 px-4 text-sm font-semibold text-gray-600">Status</th>
+                            <th class="py-3 px-4 text-sm font-semibold text-gray-600">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-100 transition">
+                            <td class="py-3 px-4 text-sm">John Doe</td>
+                            <td class="py-3 px-4 text-sm">Sick Leave</td>
+                            <td class="py-3 px-4 text-sm text-yellow-500">Pending</td>
+                            <td class="py-3 px-4 text-sm">
+                                <button class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition">Approve</button>
+                                <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition">Reject</button>
+                            </td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-100 transition">
+                            <td class="py-3 px-4 text-sm">Jane Smith</td>
+                            <td class="py-3 px-4 text-sm">Vacation</td>
+                            <td class="py-3 px-4 text-sm text-green-500">Approved</td>
+                            <td class="py-3 px-4 text-sm">
+                                <button class="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition">View</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+             <!-- Quick Actions -->
+             <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Quick Actions</h2>
+                <div class="grid grid-cols-2 gap-6 mt-6">
+                    <!-- Quick Action Cards -->
+                    <a href="add-employee.html"
+                        class="bg-blue-100 text-center p-4 rounded-lg shadow-md hover:bg-blue-200 transition">
+                        <svg class="w-12 h-12 text-blue-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                        <p class="text-lg font-semibold text-blue-600">Add Employee</p>
+                    </a>
+                    <a href="leave-management.html"
+                        class="bg-green-100 text-center p-4 rounded-lg shadow-md hover:bg-green-200 transition">
+                        <svg class="w-12 h-12 text-green-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                        <p class="text-lg font-semibold text-green-600">Approve Leave</p>
+                    </a>
+                    <a href="create-payslip.html"
+                        class="bg-yellow-100 text-center p-4 rounded-lg shadow-md hover:bg-yellow-200 transition">
+                        <svg class="w-12 h-12 text-yellow-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 2v6h6M14 2L6 10M14 8l-8 8" />
+                        </svg>
+                        <p class="text-lg font-semibold text-yellow-600">Create Payslip</p>
+                    </a>
+                    <a href="attendance-management.html"
+                        class="bg-red-100 text-center p-4 rounded-lg shadow-md hover:bg-red-200 transition">
+                        <svg class="w-12 h-12 text-red-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16M8 12l4 4 4-4" />
+                        </svg>
+                        <p class="text-lg font-semibold text-red-600">View Attendance</p>
+                    </a>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

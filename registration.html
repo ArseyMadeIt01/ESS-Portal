@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration - ESS Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom focus and transition for inputs */
+    .input-field:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 1px #3b82f6;
+    }
+
+    .input-field {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 font-sans flex items-center justify-center min-h-screen">
+
+  <!-- Registration Container -->
+  <div class="bg-white shadow-xl rounded-xl p-8 max-w-lg w-full">
+
+    <!-- Title -->
+    <h2 class="text-3xl font-extrabold text-center text-gray-800 mb-8">Create Your Account</h2>
+
+    <!-- Registration Form -->
+    <form action="index.html" method="GET">
+    <form action ="registration.php" method="post"></form>
+      <div class="space-y-6">
+
+        <!-- Full Name -->
+        <div>
+          <label for="full_name" class="block text-sm font-medium text-gray-700">Full Name</label>
+          <input type="text" id="full_name" name="full_name" required class="input-field w-full mt-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 transition-all duration-300" placeholder="Enter your full name">
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+          <input type="email" id="email" name="email" required class="input-field w-full mt-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 transition-all duration-300" placeholder="Enter your email">
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+          <input type="password" id="password" name="password" required class="input-field w-full mt-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 transition-all duration-300" placeholder="Enter your password">
+        </div>
+
+        <!-- Role -->
+        <div>
+          <label for="role" class="block text-sm font-medium text-gray-700">Role</label>
+          <select id="role" name="role" required class="input-field w-full mt-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 transition-all duration-300">
+            <option value="employee">Employee</option>
+            <option value="hr">HR</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="flex items-center">
+          <input type="checkbox" id="terms" name="terms" required class="h-5 w-5 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+          <label for="terms" class="ml-2 text-sm text-gray-700">I agree to the <a href="#" class="text-indigo-600 hover:underline">Terms and Conditions</a></label>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button type="submit" class="w-full py-3 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition-all duration-300 ease-in-out transform hover:scale-105">
+            Register
+          </button>
+        </div>
+
+        <!-- Already Have an Account -->
+        <div class="text-center text-sm text-gray-600 mt-4">
+          <p>Already have an account? <a href="login.html" class="text-indigo-600 hover:underline">Login here</a></p>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script>
+    document.querySelector("form").addEventListener("submit", function (event) {
+      // Prevent form submission to allow additional validation
+      event.preventDefault();
+  
+      // Gather form data
+      const fullName = document.getElementById("full_name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const role = document.getElementById("role").value;
+      const termsAccepted = document.getElementById("terms").checked;
+  
+      // Basic validation
+      if (!fullName || !email || !password || !role) {
+        alert("Please fill in all the required fields.");
+        return;
+      }
+      if (!termsAccepted) {
+        alert("You must agree to the terms and conditions.");
+        return;
+      }
+  
+      // If all validations pass, submit the form
+      this.submit();
+    });
+  </script>
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payroll Management</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+  <!-- Container -->
+  <div class="container mx-auto p-8">
+     <!-- Back Button -->
+     <div class="absolute top-6 right-6">
+        <a href="home.html" class="text-blue-500 font-medium text-lg hover:text-blue-700">
+            &#8592; Back to Home
+        </a>
+    </div>
+
+    <!-- Page Title -->
+    <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+      <h1 class="text-3xl font-bold text-gray-700">Payroll Management</h1>
+      <p class="text-gray-500 mt-2">Manage salary details, pay slips, and tax calculations seamlessly.</p>
+    </div>
+
+    <!-- Salary Breakdown -->
+    <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+      <h2 class="text-2xl font-semibold text-gray-700 mb-4">Salary Breakdown</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+          <h3 class="text-gray-600 font-medium">Basic Salary</h3>
+          <p class="text-xl font-bold text-gray-800">$3,000</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+          <h3 class="text-gray-600 font-medium">Bonuses</h3>
+          <p class="text-xl font-bold text-gray-800">$500</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+          <h3 class="text-gray-600 font-medium">Deductions (Tax)</h3>
+          <p class="text-xl font-bold text-red-600">-$700</p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h3 class="text-gray-700 font-medium">Net Salary:</h3>
+        <p class="text-2xl font-bold text-green-600">$2,800</p>
+      </div>
+    </div>
+
+    <!-- Pay Slips -->
+    <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+      <h2 class="text-2xl font-semibold text-gray-700 mb-4">Pay Slips</h2>
+      <ul class="divide-y divide-gray-200">
+        <li class="py-4 flex justify-between items-center">
+          <span class="text-gray-700">January 2024</span>
+          <a href="#" class="text-indigo-600 hover:underline">Download</a>
+        </li>
+        <li class="py-4 flex justify-between items-center">
+          <span class="text-gray-700">February 2024</span>
+          <a href="#" class="text-indigo-600 hover:underline">Download</a>
+        </li>
+        <li class="py-4 flex justify-between items-center">
+          <span class="text-gray-700">March 2024</span>
+          <a href="#" class="text-indigo-600 hover:underline">Download</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Tax Calculation -->
+    <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+      <h2 class="text-2xl font-semibold text-gray-700 mb-4">Tax Calculation</h2>
+      <p class="text-gray-600">Tax is calculated automatically based on the latest tax rules.</p>
+      <div class="mt-4">
+        <h3 class="text-gray-700 font-medium">Tax Amount:</h3>
+        <p class="text-xl font-bold text-red-600">$700</p>
+      </div>
+    </div>
+
+    <!-- Direct Deposit -->
+    <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+      <h2 class="text-2xl font-semibold text-gray-700 mb-4">Direct Deposit</h2>
+      <p class="text-gray-600">Your salary is directly deposited to your linked bank account.</p>
+      <div class="mt-4">
+        <h3 class="text-gray-700 font-medium">Bank Account:</h3>
+        <p class="text-xl font-bold text-gray-800">XXXX-1234 (ABC Bank)</p>
+      </div>
+    </div>
+
+    <!-- Overtime and Bonuses -->
+    <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+      <h2 class="text-2xl font-semibold text-gray-700 mb-4">Overtime & Bonuses</h2>
+      <p class="text-gray-600">Overtime and bonuses are automatically calculated and added to your salary.</p>
+      <div class="mt-4">
+        <h3 class="text-gray-700 font-medium">Overtime Pay:</h3>
+        <p class="text-xl font-bold text-green-600">$200</p>
+      </div>
+    </div>
+
+    <!-- Tax Form Generation -->
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <h2 class="text-2xl font-semibold text-gray-700 mb-4">Tax Form Generation</h2>
+      <p class="text-gray-600">Generate tax forms such as W-2, 1099, and more.</p>
+      <button class="mt-4 px-6 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-all">Generate Tax Form</button>
+    </div>
+
+  </div>
+</body>
+
+</html>

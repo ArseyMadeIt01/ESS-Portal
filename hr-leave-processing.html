@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Request Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white w-full max-w-lg p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Leave Request Form</h1>
+
+        <!-- Leave Request Form -->
+        <form action="#" method="POST">
+            <div class="mb-4">
+                <label for="employee-name" class="block text-sm font-medium text-gray-600">Employee Name</label>
+                <input type="text" id="employee-name" name="employee-name" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500" placeholder="John Doe" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="leave-type" class="block text-sm font-medium text-gray-600">Leave Type</label>
+                <select id="leave-type" name="leave-type" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500">
+                    <option value="sick">Sick Leave</option>
+                    <option value="vacation">Vacation</option>
+                    <option value="personal">Personal Leave</option>
+                </select>
+            </div>
+
+            <div class="mb-4 grid grid-cols-2 gap-4">
+                <div>
+                    <label for="start-date" class="block text-sm font-medium text-gray-600">Start Date</label>
+                    <input type="date" id="start-date" name="start-date" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div>
+                    <label for="end-date" class="block text-sm font-medium text-gray-600">End Date</label>
+                    <input type="date" id="end-date" name="end-date" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500" required>
+                </div>
+            </div>
+
+            <!-- HR Approval Check -->
+            <div class="mb-4 flex items-center">
+                <input type="checkbox" id="is-hr" name="is-hr" class="h-5 w-5 text-blue-600 rounded-full" onchange="toggleManagerApproval(this)">
+                <label for="is-hr" class="ml-2 text-sm text-gray-600">HR Request</label>
+            </div>
+
+            <div class="mb-4 hidden" id="manager-approval">
+                <label for="manager" class="block text-sm font-medium text-gray-600">Manager Approval</label>
+                <select id="manager" name="manager" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500">
+                    <option value="hr-manager">HR Manager</option>
+                    <option value="senior-hr-manager">Senior HR Manager</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-end">
+                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md shadow-md hover:bg-blue-700 transition ease-in-out">Submit Request</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Toggle HR manager approval field based on checkbox
+        function toggleManagerApproval(checkbox) {
+            const managerApproval = document.getElementById('manager-approval');
+            if (checkbox.checked) {
+                managerApproval.classList.remove('hidden');
+            } else {
+                managerApproval.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>

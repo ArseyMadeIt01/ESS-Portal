@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col">
+        <!-- Page Header -->
+        <header class="bg-white shadow-md py-4 px-6">
+            <h1 class="text-2xl font-semibold text-gray-700">Performance Dashboard</h1>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <!-- Performance Overview Section -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Performance Overview</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- KPI Cards -->
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-gray-600">Productivity Score</h3>
+                        <p class="text-4xl font-bold text-blue-500 mt-2">85%</p>
+                    </div>
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-gray-600">Project Completion</h3>
+                        <p class="text-4xl font-bold text-green-500 mt-2">92%</p>
+                    </div>
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-gray-600">Efficiency</h3>
+                        <p class="text-4xl font-bold text-purple-500 mt-2">88%</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Feedback and Reviews Section -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Feedback & Reviews</h2>
+                <table class="w-full bg-white shadow rounded-lg">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="px-4 py-2 text-left text-gray-600">Date</th>
+                            <th class="px-4 py-2 text-left text-gray-600">Reviewer</th>
+                            <th class="px-4 py-2 text-left text-gray-600">Feedback</th>
+                            <th class="px-4 py-2 text-center text-gray-600">Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t">
+                            <td class="px-4 py-2">2024-01-15</td>
+                            <td class="px-4 py-2">Manager A</td>
+                            <td class="px-4 py-2">Great progress on the project!</td>
+                            <td class="px-4 py-2 text-center">⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-4 py-2">2024-01-01</td>
+                            <td class="px-4 py-2">Peer B</td>
+                            <td class="px-4 py-2">Excellent team collaboration.</td>
+                            <td class="px-4 py-2 text-center">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Goals and Objectives Section -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Goals & Objectives</h2>
+                <div class="bg-white shadow rounded-lg p-4">
+                    <ul>
+                        <li class="flex justify-between py-2 border-b">
+                            <span>Complete Project X</span>
+                            <span class="text-green-500">Completed</span>
+                        </li>
+                        <li class="flex justify-between py-2 border-b">
+                            <span>Achieve 95% efficiency</span>
+                            <span class="text-yellow-500">In Progress</span>
+                        </li>
+                        <li class="flex justify-between py-2">
+                            <span>Attend Leadership Training</span>
+                            <span class="text-red-500">Not Started</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Recognition and Achievements Section -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Recognition & Achievements</h2>
+                <div class="bg-white shadow rounded-lg p-4">
+                    <ul>
+                        <li class="py-2">🏆 Employee of the Month - December 2023</li>
+                        <li class="py-2">✅ Completed Agile Project Management Certification</li>
+                        <li class="py-2">🎉 Teamwork Excellence Award - Q4 2023</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Actionable Buttons -->
+            <div class="flex justify-end gap-4">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600">
+                    Request Feedback
+                </button>
+                <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600">
+                    Update Goals
+                </button>
+                <button class="bg-gray-500 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-600">
+                    View Detailed Report
+                </button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

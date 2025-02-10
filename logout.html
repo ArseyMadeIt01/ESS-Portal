@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - ESS Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 flex items-center justify-center min-h-screen">
+    <!-- Modal Background -->
+    <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+        <!-- Modal Container -->
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+            <!-- Modal Header -->
+            <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Are you sure?</h2>
+            <p class="text-center text-gray-600 mb-6">Do you really want to log out of your account?</p>
+
+            <!-- Modal Actions -->
+            <div class="flex justify-around">
+                <a href="login.html" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+                    OK
+                </a>
+                <button onclick="cancelLogout()" class="px-6 py-3 bg-gray-300 text-gray-800 font-semibold rounded-lg hover:bg-gray-400 transition duration-300">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cancel Logout Script -->
+    <script>
+        function cancelLogout() {
+            window.location.href = "home.html"; // Redirect back to the dashboard or previous page
+        }
+    </script>
+</body>
+
+</html>

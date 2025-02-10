@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Processing - Employee Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <div class="min-h-screen flex flex-col">
+
+        <!-- Navbar -->
+        <header class="bg-gray-800 text-white p-6">
+            <div class="flex items-center justify-between">
+                <a href="dashboard.html" class="text-2xl font-semibold">ESS Portal</a>
+                <nav class="space-x-4">
+                    <a href="employee-dashboard.html" class="hover:text-gray-300">Back</a>
+                    <a href="help.html" class="hover:text-gray-300">Help</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+
+            <!-- Leave Request Form, Leave Status, and Leave Balance -->
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Leave Request Form -->
+                <div class="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Request Leave</h2>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label for="leaveType" class="block text-sm font-semibold text-gray-700">Leave Type</label>
+                            <select id="leaveType" name="leaveType" class="w-full mt-2 p-2 border rounded-lg bg-gray-100">
+                                <option value="sick">Sick Leave</option>
+                                <option value="vacation">Vacation</option>
+                                <option value="emergency">Emergency Leave</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="startDate" class="block text-sm font-semibold text-gray-700">Start Date</label>
+                            <input type="date" id="startDate" name="startDate" class="w-full mt-2 p-2 border rounded-lg bg-gray-100" required>
+                        </div>
+
+                        <div>
+                            <label for="endDate" class="block text-sm font-semibold text-gray-700">End Date</label>
+                            <input type="date" id="endDate" name="endDate" class="w-full mt-2 p-2 border rounded-lg bg-gray-100" required>
+                        </div>
+
+                        <div>
+                            <label for="reason" class="block text-sm font-semibold text-gray-700">Reason for Leave</label>
+                            <textarea id="reason" name="reason" rows="4" class="w-full mt-2 p-2 border rounded-lg bg-gray-100" required></textarea>
+                        </div>
+                        <div>
+                            <label for="reliever" class="block text-sm font-semibold text-gray-700">Reliever</label>
+                            <textarea id="reliever" name="reliever" rows="4" class="w-full mt-2 p-2 border rounded-lg bg-gray-100" required></textarea>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Submit Request</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Leave Status (Centered) -->
+                <div class="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto col-span-1 md:col-span-1">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Leave Status</h2>
+                    <table class="w-full text-left table-auto">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Leave Type</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Start Date</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">End Date</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Status</th>
+                                <th class="py-3 px-4 text-sm font-semibold text-gray-600">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-100 transition">
+                                <td class="py-3 px-4 text-sm">Vacation</td>
+                                <td class="py-3 px-4 text-sm">2025-02-01</td>
+                                <td class="py-3 px-4 text-sm">2025-02-07</td>
+                                <td class="py-3 px-4 text-sm text-yellow-600">Pending</td>
+                                <td class="py-3 px-4 text-sm">
+                                    <button class="text-blue-500 hover:underline">Cancel</button>
+                                </td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-100 transition">
+                                <td class="py-3 px-4 text-sm">Sick Leave</td>
+                                <td class="py-3 px-4 text-sm">2025-01-20</td>
+                                <td class="py-3 px-4 text-sm">2025-01-22</td>
+                                <td class="py-3 px-4 text-sm text-green-600">Approved</td>
+                                <td class="py-3 px-4 text-sm">
+                                    <button class="text-blue-500 hover:underline">Cancel</button>
+                                </td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-100 transition">
+                                <td class="py-3 px-4 text-sm">Emergency</td>
+                                <td class="py-3 px-4 text-sm">2025-01-15</td>
+                                <td class="py-3 px-4 text-sm">2025-01-16</td>
+                                <td class="py-3 px-4 text-sm text-red-600">Rejected</td>
+                                <td class="py-3 px-4 text-sm">
+                                    <button class="text-blue-500 hover:underline">Cancel</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Leave Balance -->
+                <div class="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Leave Balance</h2>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold text-gray-800">Vacation Leave</span>
+                            <span class="text-green-600">10 Days</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold text-gray-800">Sick Leave</span>
+                            <span class="text-green-600">5 Days</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold text-gray-800">Emergency Leave</span>
+                            <span class="text-green-600">3 Days</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white p-6">
+            <div class="flex justify-center">
+                <p>&copy; 2025 ESS Portal. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

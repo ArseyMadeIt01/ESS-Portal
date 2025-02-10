@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Claims</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col">
+        <!-- Page Header -->
+        <header class="bg-white shadow-md py-4 px-6">
+            <h1 class="text-2xl font-semibold text-gray-700">Expense Claims</h1>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <!-- Expense Summary Section -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Expense Summary</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-gray-600">Total Claimed</h3>
+                        <p class="text-4xl font-bold text-blue-500 mt-2">$1,250</p>
+                    </div>
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-gray-600">Approved</h3>
+                        <p class="text-4xl font-bold text-green-500 mt-2">$950</p>
+                    </div>
+                    <div class="bg-white shadow rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-gray-600">Pending</h3>
+                        <p class="text-4xl font-bold text-yellow-500 mt-2">$300</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Claim Submission Form -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Submit a New Claim</h2>
+                <form class="bg-white shadow rounded-lg p-6 space-y-4">
+                    <div>
+                        <label class="block text-gray-600 font-medium" for="claim-date">Date</label>
+                        <input type="date" id="claim-date" class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-gray-600 font-medium" for="claim-amount">Amount ($)</label>
+                        <input type="number" id="claim-amount" class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Enter amount">
+                    </div>
+                    <div>
+                        <label class="block text-gray-600 font-medium" for="claim-category">Category</label>
+                        <select id="claim-category" class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            <option value="travel">Travel</option>
+                            <option value="food">Food</option>
+                            <option value="accommodation">Accommodation</option>
+                            <option value="miscellaneous">Miscellaneous</option>
+                        </select>
+                
+                        <div id="expense-details" class="mt-6">
+                            <div id="travel" class="hidden">
+                                <h2 class="text-xl font-semibold text-blue-500 mb-2">Travel</h2>
+                                <ul class="list-disc list-inside text-gray-700">
+                                    <li>Airfare</li>
+                                    <li>Train Tickets</li>
+                                    <li>Fuel Reimbursements</li>
+                                    <li>Taxi Services</li>
+                                </ul>
+                            </div>
+                
+                            <div id="food" class="hidden">
+                                <h2 class="text-xl font-semibold text-green-500 mb-2">Food</h2>
+                                <ul class="list-disc list-inside text-gray-700">
+                                    <li>Client Meetings</li>
+                                    <li>Meal Stipends</li>
+                                    <li>Conference Lunches</li>
+                                </ul>
+                            </div>
+                
+                            <div id="accommodation" class="hidden">
+                                <h2 class="text-xl font-semibold text-purple-500 mb-2">Accommodation</h2>
+                                <ul class="list-disc list-inside text-gray-700">
+                                    <li>Hotel Stays</li>
+                                    <li>Rental Apartments</li>
+                                    <li>Temporary Lodging</li>
+                                </ul>
+                            </div>
+                
+                            <div id="miscellaneous" class="hidden">
+                                <h2 class="text-xl font-semibold text-orange-500 mb-2">Miscellaneous</h2>
+                                <ul class="list-disc list-inside text-gray-700">
+                                    <li>Office Supplies</li>
+                                    <li>Internet Bills</li>
+                                    <li>Phone Bills</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <script>
+                        const selectElement = document.getElementById('expense-category');
+                        const details = document.getElementById('expense-details');
+                
+                        selectElement.addEventListener('change', (e) => {
+                            const selectedValue = e.target.value;
+                
+                            // Hide all sections
+                            details.querySelectorAll('div').forEach(div => div.classList.add('hidden'));
+                
+                            // Show the selected section
+                            if (selectedValue) {
+                                document.getElementById(selectedValue).classList.remove('hidden');
+                            }
+                        });
+                    </script>
+                    </div>
+                    <div>
+                        <label class="block text-gray-600 font-medium" for="claim-description">Description</label>
+                        <textarea id="claim-description" class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Enter details"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-gray-600 font-medium" for="claim-receipt">Upload Receipt</label>
+                        <input type="file" id="claim-receipt" class="w-full">
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600">Submit Claim</button>
+                </form>
+            </section>
+
+            <!-- Expense Claims History -->
+            <section class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">Expense Claims History</h2>
+                <table class="w-full bg-white shadow rounded-lg">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="px-4 py-2 text-left text-gray-600">Date</th>
+                            <th class="px-4 py-2 text-left text-gray-600">Amount</th>
+                            <th class="px-4 py-2 text-left text-gray-600">Category</th>
+                            <th class="px-4 py-2 text-left text-gray-600">Status</th>
+                            <th class="px-4 py-2 text-left text-gray-600">Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t">
+                            <td class="px-4 py-2">2024-01-15</td>
+                            <td class="px-4 py-2">$150</td>
+                            <td class="px-4 py-2">Travel</td>
+                            <td class="px-4 py-2 text-green-500">Approved</td>
+                            <td class="px-4 py-2">Processed</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-4 py-2">2024-01-10</td>
+                            <td class="px-4 py-2">$50</td>
+                            <td class="px-4 py-2">Food</td>
+                            <td class="px-4 py-2 text-yellow-500">Pending</td>
+                            <td class="px-4 py-2">Under Review</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Actionable Buttons -->
+            <div class="flex justify-end gap-4">
+                <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600">
+                    Download Report
+                </button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

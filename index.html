@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESS Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <div class="min-h-screen flex flex-col">
+        <!-- Navbar -->
+        <header class="bg-blue-600 text-white py-4 shadow-md">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <h1 class="text-2xl font-bold">EMPLOYEE SELF-SERVICE Portal</h1>
+                <nav class="space-x-4">
+                    <a href="#" class="hover:underline">Dashboard</a>
+                    <a href="profile.html" class="hover:underline">Profile</a>
+                    <a href="help.html" class="hover:underline">Settings</a>
+                    <a href="logout.html" class="hover:underline">Logout</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 container mx-auto px-4 py-6">
+    
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Profile Section -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-bold mb-4">My Profile</h3>
+                    <p>Name: John Doe</p>
+                    <p>Role: Software Engineer</p>
+                    <p>Email: john.doe@example.com</p>
+                    <button class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Edit Profile</button>
+                </div>
+
+                <!-- Attendance Section -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-bold mb-4">Attendance</h3>
+                    <p>Attendance Percentage: 92%</p>
+                    <p>Days Absent: 3</p>
+                    <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">View Details</button>
+                </div>
+
+                <!-- Payslip Section -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-bold mb-4">Payslips</h3>
+                    <p>Latest Payslip: Dec 2024</p>
+                    <button class="mt-4 px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600">Download</button>
+                </div>
+
+                <!-- Leave Management Section -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-bold mb-4">Leave Management</h3>
+                    <p>Remaining Leave Days: 10</p>
+                    <button class="mt-4 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Apply for Leave</button>
+                </div>
+
+                <!-- Performance Section -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-bold mb-4">Performance</h3>
+                    <p>Current Rating: 4.5/5</p>
+                    <button class="mt-4 px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">View Report</button>
+                </div>
+
+                <!-- Notifications Section -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-bold mb-4">Notifications</h3>
+                    <p>You have 3 new notifications.</p>
+                    <button class="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">View Notifications</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-gray-200 py-4">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2025 ESS Portal. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
